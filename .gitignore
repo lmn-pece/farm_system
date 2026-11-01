@@ -42,3 +42,4 @@ tsconfig.tsbuildinfo
 # ===== 其他 =====
 hs_err_pid*
 replay_pid*
+summary.txt
