@@ -1,0 +1,49 @@
+# 端口号
+server:
+  port: 8080
+
+# 日志格式
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %clr(%-5level) ---  [%-15thread] %cyan(%-50logger{50}):%msg%n'
+
+spring:
+  application:
+    name: farm_main # 模块名
+  config:
+    # 从 .env 文件加载敏感配置（可选，不存在时使用下方默认值）
+    import:
+      - optional:file:./.env[.properties]
+      - optional:file:../.env[.properties]
+      - optional:file:./farm/.env[.properties]
+  # 数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL:jdbc:mysql:///farm?serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:123456}
+  cache:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 3000ms
+
+# 配置Mybatis-plus
+mybatis-plus:
+  global-config:
+    db-config:
+      # 主键生成策略为自增
+      id-type: auto
+  configuration:
+    map-underscore-to-camel-case: true # 开启列名自动驼峰命名映射规则
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 开启sql日志
+
+
+# JWT 配置
+jwt:
+  #JWT 密钥
+  secret: ${JWT_SECRET:myVeryLongSecrectKeyForJWTTokenGenerationThatMustBeLongEnoughForSecurity123456789}
+  #JWT 过期时间（秒）
+  expiration: ${JWT_EXPIRATION:604800}
+

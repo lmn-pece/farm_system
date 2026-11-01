@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>测试接口</title>
+</head>
+<body>
+<button id="sendBtn">发送form‑urlencoded POST请求（触发FormContentFilter）</button>
+<pre id="result"></pre>
+
+<script>
+    const url = "http://localhost/User/addUser"; // 改成你自己的接口地址
+    document.getElementById('sendBtn').onclick = async () => {
+        const params = new URLSearchParams();
+        params.append("name", "测试");
+        params.append("id", "1");
+
+        try {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: params
+            });
+            const text = await res.text();
+            document.getElementById('result').innerText = `响应码:${res.status}\n${text}`;
+        } catch (err) {
+            document.getElementById('result').innerText = "请求异常：" + err;
+        }
+    }
+</script>
+</body>
+</html>

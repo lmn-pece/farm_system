@@ -1,0 +1,3 @@
+# 让该模块自动识别 GlobalExceptionHandler 异常处理器类
+org.example.farm_common.exception.GlobalExceptionHandler
+
