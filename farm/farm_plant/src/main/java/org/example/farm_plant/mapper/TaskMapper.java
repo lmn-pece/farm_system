@@ -1,7 +1,7 @@
-package com.itbaizhan.farm_plant.mapper;
+package org.example.farm_plant.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.itbaizhan.farm_plant.entity.Task;
+import org.example.farm_plant.entity.Task;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;

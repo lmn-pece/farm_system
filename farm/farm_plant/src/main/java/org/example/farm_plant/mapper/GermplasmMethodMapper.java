@@ -1,7 +1,7 @@
-package com.itbaizhan.farm_plant.mapper;
+package org.example.farm_plant.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.itbaizhan.farm_plant.entity.GermplasmMethod;
+import org.example.farm_plant.entity.GermplasmMethod;
 
 /**
  * 种植方法Mapper

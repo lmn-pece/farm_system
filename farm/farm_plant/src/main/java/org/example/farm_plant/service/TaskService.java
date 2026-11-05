@@ -1,13 +1,13 @@
-package com.itbaizhan.farm_plant.service;
+package org.example.farm_plant.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.itbaizhan.farm_common.util.SecurityUtil;
-import com.itbaizhan.farm_plant.entity.Employee;
-import com.itbaizhan.farm_plant.entity.Task;
-import com.itbaizhan.farm_plant.mapper.EmployeeMapper;
-import com.itbaizhan.farm_plant.mapper.TaskMapper;
+import org.example.farm_common.util.SecurityUtil;
+import org.example.farm_plant.entity.Employee;
+import org.example.farm_plant.entity.Task;
+import org.example.farm_plant.mapper.EmployeeMapper;
+import org.example.farm_plant.mapper.TaskMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

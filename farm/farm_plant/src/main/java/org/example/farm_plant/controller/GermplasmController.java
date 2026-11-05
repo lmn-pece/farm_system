@@ -1,9 +1,9 @@
-package com.itbaizhan.farm_plant.controller;
+package org.example.farm_plant.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.itbaizhan.farm_common.result.BaseResult;
-import com.itbaizhan.farm_plant.entity.Germplasm;
-import com.itbaizhan.farm_plant.service.GermplasmService;
+import org.example.farm_common.result.BaseResult;
+import org.example.farm_plant.entity.Germplasm;
+import org.example.farm_plant.service.GermplasmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

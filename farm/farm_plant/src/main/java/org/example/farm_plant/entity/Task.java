@@ -1,4 +1,4 @@
-package com.itbaizhan.farm_plant.entity;
+package org.example.farm_plant.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

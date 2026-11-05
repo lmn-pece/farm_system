@@ -1,7 +1,7 @@
-package com.itbaizhan.farm_plant.mapper;
+package org.example.farm_plant.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.itbaizhan.farm_plant.entity.Machine;
+import org.example.farm_plant.entity.Machine;
 
 /**
  * 农机信息Mapper
